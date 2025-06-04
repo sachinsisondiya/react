@@ -10,13 +10,9 @@ function App() {
   return (
     <div className ="todo-container">
      <AppName></AppName>
-      
-        <Addtodo className='yes'></Addtodo>
+        <Addtodo></Addtodo>
         <Todoitem1></Todoitem1>
         <TodoItem2></TodoItem2>
-        
- 
-
     </div>
   );   
 }
