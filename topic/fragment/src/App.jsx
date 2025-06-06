@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Fragment } from 'react';
 import Items from './component/items';
 import Msg from './component/msg';
+import './App.css';
 
 function App() {
  //let fooditems=[];
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <React.Fragment>
-    <h1>healthy food</h1>
+    <h1 className="m-head">healthy food</h1>
     <Msg items={foodItems}></Msg>
     <Items name={foodItems}></Items>
 
