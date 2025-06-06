@@ -1,8 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AppName from './component/AppName';
 import Addtodo from './component/Addtodo';
-import Todoitem1 from './component/todoitem1';
-import TodoItem2 from './component/todoitem2'
+import TodoItem from './component/Todoitem';
 import './App.css';
 function App() {
   
@@ -12,8 +11,9 @@ function App() {
      <AppName></AppName>
       <Addtodo></Addtodo>
       <div className="items-container">
-      <Todoitem1></Todoitem1>
-      <TodoItem2></TodoItem2>
+        <TodoItem todoDate="4/10/2025" todoName="Buy Milk"></TodoItem>
+        <TodoItem todoDate="11/05/2025" todoName="Go to college"></TodoItem>
+    
       </div>
       
     </div>

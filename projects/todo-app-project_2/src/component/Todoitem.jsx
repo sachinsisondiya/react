@@ -1,16 +1,17 @@
-function TodoItem2(){
-  let itemName='go to school';
-  let itemDate='26/05/205'
-return (
-   <div class="row kg-row">
+function TodoItem({todoName,todoDate}) {
+  return (
+  <div>
+  <div class="row kg-row">
     <div class="col-4">
-      {itemName}
+      {todoName}
     </div>
     <div class="col-4">
-      {itemDate}
+     {todoDate}
     </div>
     <div class="col-2"><button type="button" class="btn btn-danger kg-button">Delete</button></div>
   </div>
-)
+  </div>)
+
 }
-export default TodoItem2;
+
+export default TodoItem;
