@@ -2,19 +2,9 @@
 text-align: center;
   
 }
-.h1-head{
-  font-weight: 700;
-  font-size: 45px;
-  margin: 10px;
-  margin-bottom: 20px;
-}
 
 input {
   width: 100%;
-}
-
-.items-container {
-  text-align: left;
 }
 
 .kg-button {

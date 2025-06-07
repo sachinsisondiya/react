@@ -1,23 +1,32 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import AppName from './component/AppName';
-import Addtodo from './component/Addtodo';
-import TodoItem from './component/Todoitem';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import AppName from "./component/AppName";
+import Addtodo from "./component/Addtodo";
+import Todoitemss from "./component/Todoitemss";
+import "./App.css";
 function App() {
-  
-
+  const todoItems = [
+    {
+      name: "Buy Milk",
+      dueDate: "4/10/2025",
+    },
+    {
+      name: "Go to College",
+      dueDate: "4/10/2025",
+    },
+     {
+      name: "Like this video",
+      dueDate: "right now",
+    },
+  ];
+                    // 4:14 
   return (
-    <div className ="todo-container">
-     <AppName></AppName>
+    <div className="todo-container">
+      <AppName></AppName>
       <Addtodo></Addtodo>
-      <div className="items-container">
-        <TodoItem todoDate="4/10/2025" todoName="Buy Milk"></TodoItem>
-        <TodoItem todoDate="11/05/2025" todoName="Go to college"></TodoItem>
-    
-      </div>
+      <Todoitemss todoItems={todoItems}></Todoitemss>
       
     </div>
-  );   
+  );
 }
 
-export default App
+export default App;
