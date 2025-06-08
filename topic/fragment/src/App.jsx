@@ -8,6 +8,9 @@ import FoodInput from './component/FoodInput';
 function App() {
  //let fooditems=[];
  let foodItems=["Dal","Vegetable","Froots","Milk","Salad"];
+ const handleOnChange=() =>{
+  console.log(event.target.value);
+ }
   
   //let message=fooditems.length===0 ? <h1>i am still hungry.</h1>:null;
 
@@ -15,7 +18,7 @@ function App() {
     <>
      <Container>
      <h1 className="m-head">healthy food</h1>
-     <FoodInput></FoodInput>
+     <FoodInput handleOnChange={handleOnChange}></FoodInput>
     <Msg items={foodItems}></Msg>
     <Items name={foodItems}></Items>
     </Container>
