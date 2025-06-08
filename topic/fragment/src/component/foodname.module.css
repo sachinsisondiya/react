@@ -1,8 +1,14 @@
 .new-items{
 background-color: rgba(1, 4, 185, 0.555);
+margin-top: 2px;
 }
 .new-span{
   font-weight:600;
   color:rgb(158, 255, 1);
+
+}
+.button{
+
+  float :right;
 
 }

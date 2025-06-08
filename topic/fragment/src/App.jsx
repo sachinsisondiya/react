@@ -3,6 +3,7 @@ import Items from './component/items';
 import Msg from './component/msg';
 import './App.css';
 import Container from './component/container';
+import FoodInput from './component/FoodInput';
 
 function App() {
  //let fooditems=[];
@@ -14,13 +15,14 @@ function App() {
     <>
      <Container>
      <h1 className="m-head">healthy food</h1>
+     <FoodInput></FoodInput>
     <Msg items={foodItems}></Msg>
     <Items name={foodItems}></Items>
     </Container>
 
-    <Container>
+    {/* <Container>
       <p>Above is the list of healthy food</p>
-    </Container>
+    </Container> */}
     
     </>
    
