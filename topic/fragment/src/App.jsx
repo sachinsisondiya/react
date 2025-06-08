@@ -4,12 +4,19 @@ import Msg from './component/msg';
 import './App.css';
 import Container from './component/container';
 import FoodInput from './component/FoodInput';
+import { useState } from 'react';
 
 function App() {
  //let fooditems=[];
  let foodItems=["Dal","Vegetable","Froots","Milk","Salad"];
- const handleOnChange=() =>{
+// let textStateArr=useState("fixed item enterd by user");
+// let textToShow= textStateArr[0];
+// let setToShow= textStateArr[1];
+
+let [textToShow,setToShow]=useState("fixed item enterd by user");
+ const handleOnChange=(event) =>{
   console.log(event.target.value);
+  setToShow(event.target.value);
  }
   
   //let message=fooditems.length===0 ? <h1>i am still hungry.</h1>:null;
@@ -19,6 +26,7 @@ function App() {
      <Container>
      <h1 className="m-head">healthy food</h1>
      <FoodInput handleOnChange={handleOnChange}></FoodInput>
+     <p>{textToShow}</p>
     <Msg items={foodItems}></Msg>
     <Items name={foodItems}></Items>
     </Container>
