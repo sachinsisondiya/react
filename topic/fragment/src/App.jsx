@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { Fragment } from 'react';
 import Items from './component/items';
 import Msg from './component/msg';
 import './App.css';
+import Container from './component/container';
 
 function App() {
  //let fooditems=[];
@@ -11,12 +11,23 @@ function App() {
   //let message=fooditems.length===0 ? <h1>i am still hungry.</h1>:null;
 
   return (
-    <React.Fragment>
-    <h1 className="m-head">healthy food</h1>
+    <>
+     <Container>
+     <h1 className="m-head">healthy food</h1>
     <Msg items={foodItems}></Msg>
     <Items name={foodItems}></Items>
+    </Container>
 
-</React.Fragment>
+    <Container>
+      <p>Above is the list of healthy food</p>
+    </Container>
+    
+    </>
+   
+
+    
+
+   
   );
 }
 

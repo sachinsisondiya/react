@@ -5,7 +5,7 @@ const FoodName=({foodItems})=>{
   return (
    
     <>
-     <li className={`${styles["new-items"]}`}><span className={styles['new-span']}>{foodItems}</span></li> 
+     <li className={`${styles["new-items"]} list-group-items`}><span className={styles['new-span']}>{foodItems}</span></li> 
     </>
   )
 }
