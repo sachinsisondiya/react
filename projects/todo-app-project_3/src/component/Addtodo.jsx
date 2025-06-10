@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { BiAddToQueue } from "react-icons/bi";
+
 function Addtodo({ onNewItem }) {
-  const [todoName,setTodoName]=useState();
-  const [todoDate,setTodoDate]=useState();
+  const [todoName,setTodoName]=useState('');
+  const [todoDate,setTodoDate]=useState('');
   
   const handleTodoName =(event)=> {
     setTodoName(event.target.value);
@@ -26,13 +28,14 @@ function Addtodo({ onNewItem }) {
       <div className="col-4">
         <input type="date" onChange={handleTodoDate} value={todoDate}/>
       </div>
+
       <div className="col-2">
         <button
           type="button"
           className="btn btn-success kg-button"
           onClick={handleAddButtonClicked}
         >
-          Add
+          <BiAddToQueue />
         </button>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { AiOutlineDelete } from "react-icons/ai";
 function TodoItem({todoName,todoDate,onDeleteClick}) {
   return (
   <div>
@@ -8,7 +9,7 @@ function TodoItem({todoName,todoDate,onDeleteClick}) {
     <div class="col-4">
      {todoDate}
     </div>
-    <div class="col-2"><button type="button" class="btn btn-danger kg-button" onClick={()=> onDeleteClick(todoName)}>Delete</button></div>
+    <div class="col-2"><button type="button" class="btn btn-danger kg-button" onClick={()=> onDeleteClick(todoName)}><AiOutlineDelete /></button></div>
   </div>
   </div>)
 
