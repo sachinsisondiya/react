@@ -15,13 +15,14 @@ function Addtodo({ onNewItem }) {
 
   } 
   
-  const handleAddButtonClicked = () =>{
+  const handleAddButtonClicked = (event) =>{
+    event.preventDefault();
     onNewItem(todoName,todoDate);
     setTodoDate("");
     setTodoName("");
   }
   return (
-    <div className="row kg-row">
+    <form className="row kg-row" onSubmit={handleAddButtonClicked}>
       <div className="col-4">
         <input type="text" placeholder="enter todo here" onChange={handleTodoName} value={todoName}/>
       </div>
@@ -31,14 +32,14 @@ function Addtodo({ onNewItem }) {
 
       <div className="col-2">
         <button
-          type="button"
+          type="submit"
           className="btn btn-success kg-button"
-          onClick={handleAddButtonClicked}
+      
         >
           <BiAddToQueue />
         </button>
       </div>
-    </div>
+    </form>
   );
 }
 
