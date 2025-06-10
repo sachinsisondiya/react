@@ -25,7 +25,11 @@ function App() {
   const handleNewItems=(itemName,itemDate)=>{
     console.log(`New Item Added: ${itemName}
       date: ${itemDate}`);
-  }
+      const newTodoItems=[...todoItems,
+        {name: itemName , dueDate: itemDate},
+      ];
+      setTodoItems(newTodoItems);
+  };
 
 
   return (

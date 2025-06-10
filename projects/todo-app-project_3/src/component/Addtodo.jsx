@@ -11,26 +11,26 @@ function Addtodo({ onNewItem }) {
   const handleTodoDate =(event) =>{
     setTodoDate(event.target.value);
 
-  } // 7:04
-
-
-
-
-
-
+  } 
+  
+  const handleAddButtonClicked = () =>{
+    onNewItem(todoName,todoDate);
+    setTodoDate("");
+    setTodoName("");
+  }
   return (
     <div className="row kg-row">
       <div className="col-4">
-        <input type="text" placeholder="enter todo here" onChange={handleTodoName} />
+        <input type="text" placeholder="enter todo here" onChange={handleTodoName} value={todoName}/>
       </div>
       <div className="col-4">
-        <input type="date" onChange={handleTodoDate} />
+        <input type="date" onChange={handleTodoDate} value={todoDate}/>
       </div>
       <div className="col-2">
         <button
           type="button"
           className="btn btn-success kg-button"
-          onClick={() => onNewItem("a", "b")}
+          onClick={handleAddButtonClicked}
         >
           Add
         </button>
