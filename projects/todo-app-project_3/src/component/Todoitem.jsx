@@ -1,5 +1,8 @@
 import { AiOutlineDelete } from "react-icons/ai";
-function TodoItem({todoName,todoDate,onDeleteClick}) {
+import {TodoItemsContext} from "../store/todo-items-store";
+import { useContext } from "react";
+function TodoItem({todoName,todoDate}) {
+ const {deleteItem} = useContext(TodoItemsContext)
   return (
   <div>
   <div className="row kg-row">
@@ -9,7 +12,7 @@ function TodoItem({todoName,todoDate,onDeleteClick}) {
     <div className="col-4">
      {todoDate}
     </div>
-    <div className="col-2"><button type="button" className="btn btn-danger kg-button" onClick={()=> onDeleteClick(todoName)}><AiOutlineDelete /></button></div>
+    <div className="col-2"><button type="button" className="btn btn-danger kg-button" onClick={()=> deleteItem(todoName)}><AiOutlineDelete /></button></div>
   </div>
   </div>)
 //8 :20
