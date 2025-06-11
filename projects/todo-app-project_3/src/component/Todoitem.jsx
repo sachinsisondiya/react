@@ -12,7 +12,7 @@ function TodoItem({todoName,todoDate,onDeleteClick}) {
     <div className="col-2"><button type="button" className="btn btn-danger kg-button" onClick={()=> onDeleteClick(todoName)}><AiOutlineDelete /></button></div>
   </div>
   </div>)
-
+//8 :20
 }
 
 export default TodoItem;

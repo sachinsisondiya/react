@@ -1,33 +1,27 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { BiAddToQueue } from "react-icons/bi";
 
 function Addtodo({ onNewItem }) {
-  const [todoName,setTodoName]=useState('');
-  const [todoDate,setTodoDate]=useState('');
   
-  const handleTodoName =(event)=> {
-    setTodoName(event.target.value);
+  const todoNameElement=useRef();
+  const todoDateElement=useRef();
 
-  }
-
-  const handleTodoDate =(event) =>{
-    setTodoDate(event.target.value);
-
-  } 
-  
   const handleAddButtonClicked = (event) =>{
     event.preventDefault();
+    const todoName=todoNameElement.current.value;
+    const todoDate=todoDateElement.current.value;
+    todoNameElement.current.value="";
+    todoDateElement.current.value="";
     onNewItem(todoName,todoDate);
-    setTodoDate("");
-    setTodoName("");
+   
   }
   return (
     <form className="row kg-row" onSubmit={handleAddButtonClicked}>
       <div className="col-4">
-        <input type="text" placeholder="enter todo here" onChange={handleTodoName} value={todoName}/>
+        <input type="text" ref={todoNameElement} placeholder="enter todo here" />
       </div>
       <div className="col-4">
-        <input type="date" onChange={handleTodoDate} value={todoDate}/>
+        <input type="date" ref={todoDateElement} />
       </div>
 
       <div className="col-2">

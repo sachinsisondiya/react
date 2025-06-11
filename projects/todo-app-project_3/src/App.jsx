@@ -12,10 +12,15 @@ function App() {
 
   const handleNewItems=(itemName,itemDate)=>{
     
-      const newTodoItems=[...todoItems,
+      
+      setTodoItems((currValue) => {
+        const newTodoItems=[...currValue,
         {name: itemName , dueDate: itemDate},
       ];
-      setTodoItems(newTodoItems);
+      return newTodoItems;
+        
+
+      });
   };
 
   const handleDeleteItems=(todoItemName)=>{
