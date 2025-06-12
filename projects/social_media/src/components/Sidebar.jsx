@@ -1,4 +1,6 @@
-function Sidebar({selectedTab}) {
+function Sidebar({selectedTab,setSelectedTab}) {
+ 
+
   return (
     <>
       <div
@@ -24,7 +26,8 @@ function Sidebar({selectedTab}) {
         <hr />{" "}
         <ul className="nav nav-pills flex-column mb-auto">
           {" "}
-          <li className="nav-item">
+          <li className="nav-item"
+          onClick={()=>{setSelectedTab("Home")}}>
             {" "}
             <a href="#" className={`nav-link text-white ${selectedTab === "Home" && "active"}`} aria-current="page">
               {" "}
@@ -39,7 +42,8 @@ function Sidebar({selectedTab}) {
               Home
             </a>{" "}
           </li>{" "}
-          <li>
+          <li onClick={()=>{setSelectedTab("create post")}}
+          >
             {" "}
             <a href="#" className={`nav-link text-white ${selectedTab === "create post" && "active"}`} >
               {" "}
