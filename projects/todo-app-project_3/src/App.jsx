@@ -3,7 +3,6 @@ import AppName from "./component/AppName";
 import Addtodo from "./component/Addtodo";
 import Todoitemss from "./component/Todoitemss";
 import "./App.css";
-import { useReducer } from "react";
 import WelcomeMessage from "./component/WelcomeMessage";
 import TodoItemsContextProvider, { TodoItemsContext } from "./store/todo-items-store";
 
