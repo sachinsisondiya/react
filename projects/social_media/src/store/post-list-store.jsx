@@ -27,18 +27,10 @@ const PostListProvider = ({ children }) => {
     []
   );
 
-  const addPost = (userId, postTitle, postBody, reactions, tags) => {
+  const addPost = (post) => {
     dispatchPostList({
       type: "ADD_POST",
-      payload: {
-        id: Date.now() ,
-        title: postTitle,
-        body: postBody,
-        reaction:reactions,
-        userId:userId,
-        tags: tags,
-      },
-    });
+      payload: post,});
   };
   const addInitialPosts = (posts) => {
     dispatchPostList({
