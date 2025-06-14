@@ -1,12 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Sidebar from "./components/Sidebar";
-import Createpost from "./components/createpost";
-import PostList from "./components/PostList";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Sidebar from "../components/Sidebar";
+import Createpost from "../components/createpost";
+import PostList from "../components/PostList";
 import { useState } from "react";
-import PostListProvider from "./store/post-list-store";
+import PostListProvider from "../store/post-list-store";
+import {Outlet} from "react-router-dom"
 
 
 function App() {
@@ -22,11 +23,8 @@ function App() {
           ></Sidebar>
           <div className="content">
             <Header></Header>
-            {selectedTab === "Home" ? (
-              <PostList></PostList>
-            ) : (
-              <Createpost></Createpost>
-            )}
+            <Outlet/>
+              
             <Footer></Footer>
           </div>
         </div>
