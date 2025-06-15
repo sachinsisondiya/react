@@ -95,6 +95,9 @@ export async function createPostAction(data) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringfy(postData),
+  
+  
+  
     })
       .then((res) => res.json())
       .then((post) => {
