@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Sidebar() {
  
 
@@ -28,7 +30,7 @@ function Sidebar() {
           {" "}
           <li className="nav-item">
             {" "}
-            <a href="#" className={"nav-link text-white"} aria-current="page">
+            <Link to="/" className={"nav-link text-white"} aria-current="page">
               {" "}
               <svg
                 className="bi pe-none me-2"
@@ -39,12 +41,12 @@ function Sidebar() {
                 <use xlinkHref="#home"></use>
               </svg>
               Home
-            </a>{" "}
+            </Link>{" "}
           </li>{" "}
-          <li 
+          <li // 14:20
           >
             {" "}
-            <a href="#" className={"nav-link text-white "} >
+            <Link to="/create-post" className={"nav-link text-white "} >
               {" "}
               <svg
                 className="bi pe-none me-2"
@@ -55,7 +57,7 @@ function Sidebar() {
                 <use xlinkHref="#speedometer2"></use>
               </svg>
               create post
-            </a>{" "}
+            </Link>{" "}
           </li>{" "}
 
         </ul>{" "}
