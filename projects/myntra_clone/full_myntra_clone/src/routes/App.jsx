@@ -1,13 +1,15 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
+import FetchItems from "../components/Fetchingitems";
 
 function App() {
   
 
   return (
     <>
-    <Header/>   
+    <Header/> 
+    <FetchItems/> 
     <Outlet/>
   
     <Footer/>
